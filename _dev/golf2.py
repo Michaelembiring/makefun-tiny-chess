@@ -4,7 +4,7 @@ def post(p,d):
  r=Q.Request(E+p,json.dumps(d).encode(),{"content-type":"application/json"});return json.load(Q.urlopen(r))
 V=[0,100,320,330,500,900,20000]
 N=[-33,-31,-18,-14,14,18,31,33];B=[-17,-15,15,17];R=[-16,-1,1,16];K=[-17,-16,-15,-1,1,15,16,17]
-T=[v-64 for v in zlib.decompress(base64.b64decode("eNqFUKEWAzEI+4PqajQag8FgMGcwZ06f3v+LBXp9M9tbRNPmEUIxW/AI5gh3FTNRh5RZusd5Qo7I68qI14PHZmMSMMdklBpP8jiOcCI7Mg8j8uJ6l26EOoDn9rE0WLynEImGiBUZGNHeDBQ3ZPt6RBy6dP3Hvvr7nh99VCvfWhLxlaMrT+3hL/ntyyvM4speFlYm3BDG5/BFxjlG3X7woAao/LhJ7VmINO879cNbf+q27w2/V2Xo"))]
+T=[v-64 for v in zlib.decompress(base64.b64decode("eNqFkCEThEAIhbNli2WLhUyxUCgUCsVCsZjN9//DAevOFWfuBT59wwNUZEjNEM1UmUSINSz39NXOM2wzvy43+zx6YtI6hHrrGK2CHdSOwxRADvdDADSZ7+kLRF8I+8whlZC0riCyEpEkJBirtRhKlmjm6sQoPHz+Rx3zdd4fc5hzv5RFpGMPj30sD1/2V84vE7HL931HjBIftW1R1nVtrUpbllZ6J5QCOTaeKP8zAbDft/OP03/6Zu4LjNtivg=="))]
 M=99999;I=1<<30
 def on(s):return 0<=s<128 and not s&0x88
 class P:
@@ -103,7 +103,7 @@ class P:
    if t==3:bi+=1 if p>0 else-1
   ph=np if np<6800 else 6800
   wi=(s.wk>>4)*8+(s.wk&7);bk=(7-(s.bk>>4))*8+(s.bk&7)
-  sc+=(T[384+wi]-T[384+bk])*(6800-ph)//6800+(T[6*64+wi]-T[6*64+bk])*ph//6800
+  sc+=(T[320+wi]-T[320+bk])*ph//6800+(T[384+wi]-T[384+bk])*(6800-ph)//6800
   if bi>=2:sc+=30
   if bi<=-2:sc-=30
   return sc*s.c
